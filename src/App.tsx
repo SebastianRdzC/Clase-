@@ -1,7 +1,6 @@
-import { useState } from 'react'
 import { Button } from './components/ui/button'
 import { Input } from './components/ui/input'
-import { GraduationCap, Atom } from 'lucide-react';
+import { Atom } from 'lucide-react';
 import './App.css'
 
 function App() {
