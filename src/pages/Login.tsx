@@ -94,7 +94,12 @@ export default function Login() {
                                     <Separator className="flex-1 bg-white/20" />
                                 </div>
                                 <Button className='bg-transparent w-full border border-white/10 rounded-xl hover:bg-transparent hover:border-white/20
-                 cursor-pointer text-white/80 hover:text-white transition-all duration-200' variant={"ghost"}>
+                                cursor-pointer text-white/80 hover:text-white transition-all duration-200' variant={"ghost"}
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    navigate('/register')
+                                }}>
+                 
                                     Registrate
                                 </Button>
                             </div>

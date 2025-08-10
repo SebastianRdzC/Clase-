@@ -2,7 +2,7 @@ import { Separator } from "@radix-ui/react-separator"
 import { IconoGato } from "@/assets/iconoGato"
 import { useNavigate } from "react-router"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Play, TvMinimalPlay, BookOpenCheck, Infinity, ChevronDown } from "lucide-react"
+import { ArrowRight, Play, TvMinimalPlay, BookOpenCheck, Infinity } from "lucide-react"
 import { Card } from "@/components/ui/card"
 
 export default function Landing() {
@@ -23,14 +23,16 @@ export default function Landing() {
                         </h1>
                         <Separator orientation="vertical" className="w-[1px] h-6 sm:h-8 bg-white/20" />
                     </div>
-                    
+
                     {/* Desktop Navigation */}
                     <ul className="hidden md:flex gap-4 justify-between items-center text-sm group text-white/65">
                         <li className="cursor-pointer px-4 py-2 rounded-md transition-all duration-300 ease-in-out hover:scale-110 hover:text-white/90 group-hover:text-white/30 hover:!text-white"
                             onClick={() => navigate('/login')}>
                             Inicia sesión
                         </li>
-                        <li className="cursor-pointer px-4 py-2 rounded-md transition-all duration-300 ease-in-out hover:scale-110 hover:text-white/90 group-hover:text-white/30 hover:!text-white">
+                        <li className="cursor-pointer px-4 py-2 rounded-md transition-all duration-300 ease-in-out hover:scale-110 hover:text-white/90 group-hover:text-white/30 hover:!text-white"
+                            onClick={() => navigate('/register')}
+                        >
                             Registrate
                         </li>
                         <li className="cursor-pointer px-4 py-2 rounded-md transition-all duration-300 ease-in-out hover:scale-110 hover:text-white/90 group-hover:text-white/30 hover:!text-white">
@@ -43,9 +45,9 @@ export default function Landing() {
 
                     {/* Mobile Navigation - Simplified */}
                     <div className="flex md:hidden gap-2 text-sm">
-                        <Button 
-                            variant="ghost" 
-                            size="sm" 
+                        <Button
+                            variant="ghost"
+                            size="sm"
                             className="text-white/70 hover:text-white px-2 hover:bg-transparent "
                             onClick={() => navigate('/login')}>
                             Entrar
@@ -58,7 +60,7 @@ export default function Landing() {
 
             {/* Main Content - Responsive Layout */}
             <main className="z-5 mt-16 sm:mt-20 p-4 sm:p-6 lg:p-10 w-full text-white flex justify-center flex-1">
-                
+
                 {/* Desktop Layout */}
                 <div className="hidden lg:flex h-full w-full">
                     {/* Left Content */}
@@ -132,15 +134,15 @@ export default function Landing() {
                             <div className="rounded-full bg-white w-2 h-2 blur animate-pulse" />
                             <span>El futuro de tu educación</span>
                         </div>
-                        
+
                         <h1 className="text-3xl sm:text-4xl md:text-5xl text-white mb-4 mt-2 leading-tight">
                             Domina todas tus materias
                         </h1>
-                        
+
                         <p className="text-base sm:text-lg md:text-xl text-white/60 mb-6 max-w-2xl leading-relaxed">
                             Una plataforma integral donde estudiantes encuentran los mejores cursos académicos para sus materias.
                         </p>
-                        
+
                         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full max-w-md">
                             <Button className="bg-white h-11 sm:h-12 rounded-xl text-black hover:scale-104 hover:bg-white
                                      transition-all duration-300 ease-in-out flex-1">
@@ -162,14 +164,14 @@ export default function Landing() {
                         {/* Background Effects */}
                         <div className="bg-white/5 rounded-full w-32 h-32 sm:w-40 sm:h-40 absolute -top-4 -right-4 blur-sm opacity-50" />
                         <div className="bg-white/5 rounded-full w-32 h-32 sm:w-40 sm:h-40 absolute -bottom-4 -left-4 blur-sm opacity-50" />
-                        
+
                         <Card className="relative bg-transparent backdrop-blur-2xl border border-white/20 rounded-2xl sm:rounded-3xl 
                                  p-4 sm:p-6 shadow-2xl shadow-black/20 text-white">
                             <div className="flex flex-col gap-4 relative z-10">
                                 <h2 className="text-lg sm:text-xl text-white text-center mb-2">
                                     Nuestros cursos se componen de:
                                 </h2>
-                                
+
                                 {/* Mobile Features - Stacked */}
                                 <div className="flex flex-col gap-4">
                                     <Card className="bg-transparent border border-white/10 text-white/70 tracking-wide 
