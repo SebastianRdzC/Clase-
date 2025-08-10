@@ -152,7 +152,7 @@ export default function Landing() {
                                      transition-all duration-300 ease-in-out flex-1">
                                 <Play className="mr-2" size={16} />
                                 <span className="hidden sm:inline">Ver presentación</span>
-                                <span className="sm:hidden">Ver demo</span>
+                                <span className="sm:hidden">Ver video</span>
                             </Button>
                         </div>
                     </div>
@@ -205,10 +205,10 @@ export default function Landing() {
                     </div>
                 </div>
 
-                {/* Scroll Indicator */}
-                <div className="absolute bottom-4 sm:bottom-0 w-fit h-fit flex justify-center items-center left-1/2 -translate-x-1/2">
+                {/* Scroll Indicator
+                <div className="absolute bottom-4 sm:bottom-0 w-fit h-fit flex justify-center items-center left-1/2 -translate-x-1/2 sm:hidden">
                     <ChevronDown className="animate-bounce text-white/60" size={24} />
-                </div>
+                </div> */}
             </main>
         </div>
     )
